@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+  <title>About Us</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f7f7f7;
+    }
+
+    h1, h2 {
+      color: #007bff;
+    }
+
+    .about-section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    .about-image {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      color: #555;
+      font-size: 18px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar (You can add the navigation bar code here) -->
+
+  <div class="container mt-4">
+    <div class="about-section">
+      <h1 class="text-center mb-4">About Us</h1>
+      <div class="row">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='profile_pics/default.jpg') }}" alt="About Us Image" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h2>Welcome to Your Blog</h2>
+          <p class="about-text">Your Blog is a platform dedicated to delivering high-quality content in a wide range of topics,
+            from technology to travel, lifestyle to literature, and everything in between. Our mission is to inspire, educate,
+            and entertain our readers with insightful and engaging articles.</p>
+          <p class="about-text">Our team of passionate writers and contributors work tirelessly to curate valuable content that
+            caters to diverse interests and tastes. We believe that knowledge should be shared and stories should be heard.
+            Whether you're a seasoned enthusiast or a curious beginner, Your Blog is the perfect destination for your quest for
+            knowledge and inspiration.</p>
+          <p class="about-text">As we grow, we aim to foster a vibrant and interactive community of readers, where opinions are
+            valued and ideas are exchanged freely. We encourage our readers to actively participate in discussions and share
+            their unique perspectives, making Your Blog a hub of meaningful conversations.</p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a class ='ml-2' href="{{ url_for('users.register') }}" class="btn btn-primary btn-lg">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
